@@ -28,3 +28,38 @@ int main() {
     Jabbar.getEmployee(); //getting values of this employee by getEmployee function.
     return 0;
 }
+//second program for student's cards:
+#include<iostream>
+using namespace std;
+class Student {
+    private:
+    string name;
+    string fatherName;
+    int rollNo;
+    int Class;
+    public:
+    void setrecord(string n, string f, int r, int c); //defining we will declare it later.
+    void getrecord() {
+        cout<<"\n\n********************************"<<endl;
+        cout<<"Name: "<<name<<endl;
+        cout<<"Father's Name: "<<fatherName<<endl;
+        cout<<"Roll No: "<<rollNo<<endl;
+        cout<<"Class: "<<Class<<endl;
+        cout<<"********************************"<<endl;
+    }
+};
+void Student::setrecord(string n, string f, int r, int c) {
+    name = n;
+    fatherName = f;
+    rollNo = r;
+    Class = c;
+};
+int main() {
+    Student S1;
+    S1.setrecord("Zakia", "Sajid", 5, 8);
+    S1.getrecord();
+    Student S2;
+    S2.setrecord("Saimi", "Sami", 4, 9);
+    S2.getrecord();
+    return 0;
+}
