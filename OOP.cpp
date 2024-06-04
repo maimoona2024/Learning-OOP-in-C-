@@ -101,3 +101,72 @@ int main() {
     noman.getemployeeSalary();
     return 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* this program will take a binary number from user and after one's complement it will display number on screen. It will also check whether
+the provided number is binary or not.*/
+#include<iostream>
+#include<string>    //header file for strings
+using namespace std;
+class binaryNumber {
+    private:
+    string s;
+    public:
+    void read(void);   
+    void checkBinary(void);
+    void onesComplement(void);
+    void display();
+};
+void binaryNumber::read(void) {
+    cout<<"Please! Enter a binary number: "<<endl;
+    cin>>s;
+}
+void binaryNumber::checkBinary(void) {
+    for(int i =0; i < s.length(); i++) {
+        if(s.at(i) != '0' && s.at(i) != '1') {
+        cout<<"Your provided number is incorrect."<<endl;
+        exit(0);
+        }
+    }
+}
+void binaryNumber::onesComplement(void) {
+    checkBinary();
+    for(int i=0; i<s.length(); i++) {
+        if(s.at(i)=='0') {
+            s.at(i)='1';
+        }
+        else
+        {
+            s.at(i) = '0';
+        }
+    }
+}
+void binaryNumber::display(void) 
+{
+    cout<<"Displaying your binary Number :"<<endl;
+    for(int i = 0; i<s.length(); i++) {
+        cout<<s.at(i);
+    }
+    cout<<endl;
+}
+int main() {
+    binaryNumber b;
+    b.read();
+    b.checkBinary();
+    b.display();
+    b.onesComplement();
+    b.display();
+    return 0;
+}
+
