@@ -63,3 +63,26 @@ int main() {
     S2.getrecord();
     return 0;
 }
+
+
+//you can declare objects along with class defination like below:
+#include<iostream>
+using namespace std;
+class Employee {
+    private:
+    int employeeSalary;
+    public:
+    void setemployeeSalary( int e ) {
+        employeeSalary = e;
+    }
+    void getemployeeSalary() {
+        cout<<"The salary of the Employee is: "<<employeeSalary<<endl;
+    }
+} harry, noman;
+int main() {
+    harry.setemployeeSalary(70000);
+    harry.getemployeeSalary();
+    noman.setemployeeSalary(50000);
+    noman.getemployeeSalary();
+    return 0;
+}
