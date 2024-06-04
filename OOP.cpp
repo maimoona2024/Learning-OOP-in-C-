@@ -28,6 +28,13 @@ int main() {
     Jabbar.getEmployee(); //getting values of this employee by getEmployee function.
     return 0;
 }
+
+
+
+
+
+
+
 //second program for student's cards:
 #include<iostream>
 using namespace std;
@@ -63,6 +70,14 @@ int main() {
     S2.getrecord();
     return 0;
 }
+
+
+
+
+
+
+
+
 
 
 //you can declare objects along with class defination like below:
