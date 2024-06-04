@@ -141,7 +141,7 @@ void binaryNumber::checkBinary(void) {
     }
 }
 void binaryNumber::onesComplement(void) {
-    checkBinary();
+    checkBinary(); //check binary will be called automatically no need to call this function in main.
     for(int i=0; i<s.length(); i++) {
         if(s.at(i)=='0') {
             s.at(i)='1';
@@ -163,7 +163,7 @@ void binaryNumber::display(void)
 int main() {
     binaryNumber b;
     b.read();
-    b.checkBinary();
+    // b.checkBinary();
     b.display();
     b.onesComplement();
     b.display();
