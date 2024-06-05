@@ -170,3 +170,63 @@ int main() {
     return 0;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+//This program will display depature and arrival time of millat express train moreover it will also display stations
+#include<iostream>
+#include<string>
+using namespace std;
+class railway
+{
+private:
+    string millatArrival;
+    string millatDeparture;
+    string fromStation;
+    string toStation;
+
+public:
+    void setmillatArrival(string a);
+    void setmillatDeparture(string d);
+    void setfromStation(string f);
+    void settoStation(string t);
+    void display() {
+        cout<<"Millat Express arrival time: "<<millatArrival<<"."<<endl;
+        cout<<"Millat Express departure time: "<<millatArrival<<"."<<endl;
+        cout<<"Millat Express going from : "<<fromStation<<" to "<<toStation<<"."<<endl;
+    }
+};
+
+void railway::setmillatArrival(string a) {
+    millatArrival = a;
+}
+void railway::setmillatDeparture(string d) {
+    millatDeparture = d;
+}
+void railway::setfromStation(string f) {
+    fromStation = f;
+}
+void railway::settoStation(string t) {
+    toStation = t;
+}
+int main() {
+    railway millatExpress;
+    millatExpress.setmillatArrival("08:00 AM");
+    millatExpress.setmillatDeparture("09:00 AM");
+    millatExpress.setfromStation("Karachi");
+    millatExpress.settoStation("Lahore");
+    millatExpress.display();
+    return 0;
+}
+
+
