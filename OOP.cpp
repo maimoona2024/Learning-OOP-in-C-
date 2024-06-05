@@ -230,3 +230,49 @@ int main() {
 }
 
 
+
+
+
+
+
+
+
+
+
+//The below code will take item id and price from user and than it will display on screen.
+#include<iostream>
+using namespace std;
+class shopItems {
+    private:
+    int itemId[100]; //This is the array to store 100 items id.
+    int itemPrice[100]; //This is the array to store 100 items price.
+    int counter; //This will mention number of items.
+    public:
+    void setitemCounter(void) {
+        counter = 0;
+    } //Initializing counter with 0.
+    void setPrice(void); //declaring function.
+    void displayPrice(); //declaring function.
+};
+void shopItems::setPrice(void) {
+    cout<<"Please! Enter the Id of the item: "<<counter + 1<<endl;
+    cin>>itemId[counter];
+    cout<<"Please! Enter the Price of the item: "<<endl;
+    cin>>itemPrice[counter];
+    counter++; 
+}
+void shopItems::displayPrice(void) {
+    for(int i = 0; i < counter; i++) {
+        cout<<"The price of the item is "<<itemPrice[i]<<" and the Item Id is "<<itemId[i]<<"."<<endl;
+    }
+    
+}
+int main() {
+    shopItems Dukaan; //object for shopItems Class
+    Dukaan.setitemCounter();
+    Dukaan.setPrice();
+    Dukaan.setPrice();
+    Dukaan.displayPrice();
+    return 0;
+}
+
