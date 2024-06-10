@@ -276,3 +276,68 @@ int main() {
     return 0;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+//Employee program with class
+#include<iostream>
+using namespace std;
+class employeeData {
+    private:
+    string employeeName;
+    string employeeFather;
+    string joiningDate;
+    string employeeSalary;
+    public:
+    void setemployeeName(string n) {
+        employeeName=n;
+    }
+    void setemployeeFather(string f) {
+        employeeFather=f;
+    }
+    void setjoiningDate(string d) {
+        joiningDate=d;
+    }
+    void setemployeeSalary(string s) {
+        employeeSalary=s;
+    }
+    void display() {
+        cout<<"\n\n**************************************************"<<endl;
+        cout<<"Employee's Name: "<<employeeName<<endl;
+        cout<<"Employee's Father's Name: "<<employeeFather<<endl;
+        cout<<"Joining Date: "<<joiningDate<<endl;
+        cout<<"Salary: "<<employeeSalary<<endl;
+        cout<<"**************************************************"<<endl;
+    }
+};
+int main() {
+    employeeData Farhan;
+    Farhan.setemployeeName("Farhan");
+    Farhan.setemployeeFather("Hussain");
+    Farhan.setjoiningDate("6-October-2024");
+    Farhan.setemployeeSalary("Rs 70 000/-");
+    Farhan.display();
+    employeeData Raza;
+    Raza.setemployeeName("Raza");
+    Raza.setemployeeFather("Kamran");
+    Raza.setjoiningDate("7-October-2024");
+    Raza.setemployeeSalary("Rs 50 000/-");
+    Raza.display();
+    employeeData Chaman;
+    Chaman.setemployeeName("Chaman");
+    Chaman.setemployeeFather("Hamdan");
+    Chaman.setjoiningDate("8-October-2024");
+    Chaman.setemployeeSalary("Rs 30 000/-");
+    Chaman.display();
+    return 0;
+}
+
