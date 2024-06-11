@@ -341,3 +341,47 @@ int main() {
     return 0;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Static count data member for all objects.
+#include<iostream>
+using namespace std;
+class Employee {
+    private:
+    int id;
+    static int count;
+    public:
+    void setData(void) {
+        cout<<"Please! Enter your Id:"<<endl;
+        cin>>id;
+        count++;
+    }
+    void getData(void) {
+        cout<<"Your Employee Id is "<<id<<" and the Employee # is "<<count<<"."<<endl;
+    }
+};
+int Employee::count; //by default value is zero.
+int main() {
+    Employee Zafar, Kamran, Imran;
+    Zafar.setData();
+    Zafar.getData();
+    
+    Kamran.setData();
+    Kamran.getData();
+    
+    Imran.setData();
+    Imran.getData();
+    return 0;
+}
