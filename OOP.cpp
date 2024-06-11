@@ -385,3 +385,52 @@ int main() {
     Imran.getData();
     return 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+//Static data member and static function:
+#include<iostream>
+using namespace std;
+class Employee {
+    private:
+    int id;
+    static int count;
+    public:
+    void setData(void) {
+        cout<<"Please! Enter your Id:"<<endl;
+        cin>>id;
+        count++;
+    }
+    void getData(void) {
+        cout<<"Your Employee Id is "<<id<<" and the Employee # is "<<count<<"."<<endl;
+    }
+    static void getCount(void) {
+        //cout<<id; it throws an error.
+        cout<<"The value of count is: "<<count<<endl;
+    }
+};
+int Employee::count=1000; //by default value is zero but here we have initialized it with 1000.
+int main() {
+    Employee Zafar, Kamran, Imran;
+    Zafar.setData();
+    Zafar.getData();
+    Employee::getCount();
+    
+    Kamran.setData();
+    Kamran.getData();
+    Employee::getCount();
+    
+    Imran.setData();
+    Imran.getData();
+    Employee::getCount();
+    return 0;
+}
